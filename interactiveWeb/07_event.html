@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        .characters{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .ilbuni {
+            display: inline-block;
+            width: 100px;
+            box-sizing: border-box;
+        }
+
+        .ilbuni img {
+            width: 100%;
+        }
+
+        .special {
+            border: 5px dashed red;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="characters">
+        <div class="ilbuni a"><img src="./ilbuni/ilbuni_0.png"></div>
+        <div class="ilbuni b"><img src="./ilbuni/ilbuni_1.png"></div>
+        <div class="ilbuni c"><img src="./ilbuni/ilbuni_2.png"></div>
+    </div>
+    <div class="ilbuni d"><img src="./ilbuni/ilbuni_3.png"></div>
+</body>
+<script>
+    (()=>{
+        const ilbuni = document.querySelector('.ilbuni.c');
+        const clickIlbuniHandler = () => {
+            ilbuni.classList.toggle('special');
+        };
+        ilbuni.addEventListener('click', clickIlbuniHandler);
+    })();
+</script>
+
+</html>
