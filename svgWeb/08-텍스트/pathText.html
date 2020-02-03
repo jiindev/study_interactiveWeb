@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+        }
+
+        .svg {
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            background: #ddd;
+        }
+
+        text {
+            font-size: 1.5;
+            font-weight: bold;
+            fill: red;
+        }
+
+        path{
+            fill: transparent;
+        }
+    </style>
+</head>
+
+<body>
+    <svg class="svg" xmlns="http://www.w3.org/2000">
+        <defs>
+            <path id="text-curve" stroke="red" d="M 50 400 C 50 400, 300, 500, 400 400 C 400 400, 600 170, 700 300"></path>
+        </defs>
+        <text x="20" y="30">
+            <textPath href="#text-curve">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi enim rem quod ex fugit
+                obcaecati quo. Voluptatum magnam itaque enim aspernatur labore, totam ex, eaque suscipit tempore alias
+                saepe. Dolorem.
+            </textPath>
+        </text>
+    </svg>
+</body>
+
+</html>
