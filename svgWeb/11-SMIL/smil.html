@@ -12,8 +12,20 @@
 </head>
 <body>
     <svg class="svg" viewBox="0 0 1000 1000">
-        <rect x="10" y="10" width="20%" height="20%">
-            <animate attributeName="x" dur="1s" to="700" repeatCount="1" fill="freeze"></animate>
+        <defs>
+            <script>
+                window.addEventListener('DOMContentLoaded',()=>{
+                    const rectElem = document.querySelector('.rect');
+                    const aniElem = document.querySelector('.rect animate');
+                    console.log(aniElem);
+                    rectElem.addEventListener('click', ()=>{
+                        aniElem.beginElement();
+                    })
+                });
+            </script>
+        </defs>
+        <rect class="rect" x="10" y="10" width="20%" height="20%">
+            <animate attributeName="x" dur="1s" to="700" repeatCount="1" fill="freeze" begin="indefinite"></animate>
         </rect>
     </svg>
 </body>
