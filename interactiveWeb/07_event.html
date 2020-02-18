@@ -11,11 +11,13 @@
             display: flex;
             align-items: center;
             justify-content: center;
+            background: yellow;
         }
         .ilbuni {
             display: inline-block;
             width: 100px;
             box-sizing: border-box;
+            cursor: pointer;
         }
 
         .ilbuni img {
@@ -33,16 +35,22 @@
         <div class="ilbuni a"><img src="./ilbuni/ilbuni_0.png"></div>
         <div class="ilbuni b"><img src="./ilbuni/ilbuni_1.png"></div>
         <div class="ilbuni c"><img src="./ilbuni/ilbuni_2.png"></div>
+        <div class="ilbuni d"><img src="./ilbuni/ilbuni_3.png"></div>
     </div>
-    <div class="ilbuni d"><img src="./ilbuni/ilbuni_3.png"></div>
+    
 </body>
 <script>
     (()=>{
         const ilbuni = document.querySelector('.ilbuni.c');
+        const characters = document.querySelector('.characters');
         const clickIlbuniHandler = () => {
             ilbuni.classList.toggle('special');
         };
-        ilbuni.addEventListener('click', clickIlbuniHandler);
+        const clickHandler = (e) =>{
+            // console.log(this);
+            console.log(e.currentTarget);
+        }
+        characters.addEventListener('click', clickHandler);
     })();
 </script>
 
